@@ -2,7 +2,6 @@ import * as Location from 'expo-location'
 import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, Dimensions, Text, ScrollView, ActivityIndicator } from 'react-native';
 import { Fontisto } from "@expo/vector-icons";
-import { SelectList } from 'react-native-dropdown-select-list'
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
@@ -35,6 +34,7 @@ export default function App() {
     const json = await response.json();
     setDays(json.list)
   }
+
 
   useEffect(() => {
     getWeather();
